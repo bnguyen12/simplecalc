@@ -73,8 +73,9 @@
 			children = (
 				9F6C7D091F84A9CD00D7E1F5 /* main.swift */,
 			);
-			path = SimpleCalc;
-			sourceTree = "<group>";
+			name = SimpleCalc;
+			path = /Users/thepotato/Desktop/INFO449/HW2/simplecalc/SimpleCalc/SimpleCalc;
+			sourceTree = "<absolute>";
 		};
 		9F6C7D151F84A9E700D7E1F5 /* SimpleCalcTests */ = {
 			isa = PBXGroup;

@@ -18,8 +18,6 @@ public class Calculator {
             switch size {
                 case 1:
                     return 0
-                case 2:
-                    return Int(args[0])!
                 default:
                     for index in 0...(size - 2) {
                         sum += Int(args[index])!
@@ -32,20 +30,22 @@ public class Calculator {
             } else {
                 let num : Int = Int(args[0])!
                 switch num {
+                    case 0:
+                        return 1
                     case 1, 2:
                         return num
                     default:
                         var sum : Int = 1
-                        for index in 2...num {
-                            sum *= index
+                        for nextNum in 2...num {
+                            sum *= nextNum
                             }
                         return sum
                 }
             }
         } else {
             let operate : String = args[1]
-            var numOne : Int! = Int(args[0]) //so that numOne can change in the "%" case
-            let numTwo : Int! = Int(args[2])
+            var numOne : Int = Int(args[0])! //so that numOne can change in the "%" case
+            let numTwo : Int = Int(args[2])!
             switch operate {
                 case "+":
                     return numOne + numTwo
