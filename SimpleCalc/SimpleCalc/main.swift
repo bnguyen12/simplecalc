@@ -15,16 +15,33 @@ public class Calculator {
             return size - 1
         } else if args[size - 1] == "avg" {
             var sum : Int = 0
-            for index in 0...(size - 2) {
-                sum += Int(args[index])!
+            switch size {
+                case 1:
+                    return 0
+                case 2:
+                    return Int(args[0])!
+                default:
+                    for index in 0...(size - 2) {
+                        sum += Int(args[index])!
+                    }
+                    return sum / (size - 1)
             }
-            return sum / (size - 1)
         } else if args[size - 1] == "fact" {
-            var sum : Int = Int(args[0])!
-            for index in 1...(size - 2) {
-                sum *= Int(args[index])!
+            if size == 1 {
+                return 0
+            } else {
+                let num : Int = Int(args[0])!
+                switch num {
+                    case 1, 2:
+                        return num
+                    default:
+                        var sum : Int = 1
+                        for index in 2...num {
+                            sum *= index
+                            }
+                        return sum
+                }
             }
-            return sum
         } else {
             let operate : String = args[1]
             var numOne : Int! = Int(args[0]) //so that numOne can change in the "%" case
