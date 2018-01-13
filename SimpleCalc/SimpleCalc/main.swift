@@ -73,10 +73,19 @@ public class Calculator {
     }
 }
 
-print("UW Calculator v1")
-print("Enter an expression separated by returns:")
-let first = readLine()!
-let operation = readLine()!
-let second = readLine()!
-print(Calculator().calculate([first, operation, second]))
+if CommandLine.argc > 1 {
+    var givenNums = [String]()
+    let size : Int = Int(CommandLine.argc) - 1
+    for index in 1...size {
+        givenNums.append(CommandLine.arguments[index])
+    }
+    print(Calculator().calculate(givenNums))
+} else {
+    print("UW Calculator v1")
+    print("Enter an expression separated by returns:")
+    let first = readLine()!
+    let operation = readLine()!
+    let second = readLine()!
+    print(Calculator().calculate([first, operation, second]))
+}
 
