@@ -24,6 +24,15 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "9F6C7D051F84A9CD00D7E1F5"
+            BuildableName = "SimpleCalc"
+            BlueprintName = "SimpleCalc"
+            ReferencedContainer = "container:SimpleCalc.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
